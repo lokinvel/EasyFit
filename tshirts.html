@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyFit</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-menu-toggle" onclick="shownavbar()">
+            <i class="fa-solid fa-bars fa-xl"></i>
+        </div>
+        <h1>EasyFit</h1>
+        <div class="navbar-links">
+            <p class="cart-link"><a class="navbar-link" href="cart.html"> 
+                <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                <span id="cart-count"class="cart-count">0</span></a></p>
+        </div>
+    </nav>
+
+    <div class="side-navbar">
+        <p style="text-align: right;" onclick="closenavbar()">
+            <i class="fa-solid fa-xmark fa-xl"></i>
+        </p>
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"><a href="index.html">Home</a></p>
+            <p class="side-navbar-link"><a href="shirts.html">Shirts</a></p>
+            <p class="side-navbar-link"><a href="pants.html">Pants & chinos</a></p>
+            <p class="side-navbar-link"><a href="shorts.html">Shorts</a></p>
+            <p class="side-navbar-link"><a href="tshirts.html">T-Shirts</a></p>
+          
+
+        </div>
+
+    </div>
+    <div class="popup-overlay" onclick="closenavbar()"></div>
+
+    <div class="product-section">
+
+        <form class="product-search">
+            <input type="text" id="search" placeholder="search" autocomplete="off">
+            <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
+            <i class="fa-solid fa-xmark" id="clearBtn" style="display:none; cursor:pointer;"></i>
+        </form>
+    </div>
+
+    <div class="products">
+        <div class="product-box">
+            <img src="tshirt1.jpg" height="200px" width="200px">
+            <p>Cable Knit Polo T-shirt</p>
+            <button class="add-to-cart" onclick="openModal('Cable Knit Polo T-shirt', 899)">Buy Now 🛒</button>
+            
+        </div>
+        <div class="product-box">
+            <img src="tshirt2.jpg" height="200px" width="200px">
+            <p>Checked Regular Fit Polo T-shirt</p>
+            <button class="add-to-cart" onclick="openModal('Checked Regular Fit Polo T-shirt', 699)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="tshirt3.jpg" height="200px" width="200px">
+            <p>Textured Polo T-shirt</p>
+            <button class="add-to-cart" onclick="openModal('Textured Polo T-shirt', 799)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="tshirt4.jpg" height="200px" width="200px">
+            <p>Striped Pique Polo T-shirts</p>
+            <button class="add-to-cart" onclick="openModal('Striped Pique Polo T-shirts', 999)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="tshirt5.jpg" height="200px" width="200px">
+            <p>Striped Ottoman Polo T-shirt</p>
+            <button class="add-to-cart" onclick="openModal('Striped Ottoman Polo T-shirt', 899)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="tshirt6.jpg" height="200px" width="200px">
+            <p>Polo T-shirt with Short Sleeves</p>
+            <button class="add-to-cart" onclick="openModal('Polo T-shirt with Short Sleeves', 499)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="tshirt7.jpg" height="200px" width="200px">
+            <p>Men Regular Fit Crew Neck Short Sleeves Slogan Print T-shirt</p>
+            <button class="add-to-cart" onclick="openModal('Men Regular Fit Crew Neck Short Sleeves Slogan Print T-shirt', 699)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="tshirt8.jpg" height="200px" width="200px">
+            <p>Men Boxy Fit Crew Neck Short Sleeves Graphic Print T-Shirt</p>
+            <button class="add-to-cart" onclick="openModal('Men Boxy Fit Crew Neck Short Sleeves Graphic Print T-Shirt', 599)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="tshirt9.jpg" height="200px" width="200px">
+            <p>Kappa Men's Logo Print T-shirt</p>
+            <button class="add-to-cart" onclick="openModal('Kappa Men Logo Print T-shirt', 899)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="tshirt10.jpg" height="200px" width="200px">
+            <p>Men Crew Neck Short Sleeve T-shirt</p>
+            <button class="add-to-cart" onclick="openModal('Men Crew Neck Short Sleeve T-shirt', 999)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="tshirt11.jpg" height="200px" width="200px">
+            <p>Iconic Men Regular Fit Round Neck Short Sleeves</p>
+            <button class="add-to-cart" onclick="openModal('Iconic Men Regular Fit Round Neck Short Sleeves', 799)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="tshirt12.jpg" height="200px" width="200px">
+            <p>Men's Regular Fit Crew Neck Short Sleeves Zoro Print T-shirt</p>
+            <button class="add-to-cart" onclick="openModal('Men Regular Fit Crew Neck Short Sleeves Zoro Print T-shirt', 699)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="tshirt13.jpg" height="200px" width="200px">
+            <p>Naruto Print T-shirt</p>
+            <button class="add-to-cart" onclick="openModal('Naruto Print T-shirt', 799)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="tshirt14.jpg" height="200px" width="200px">
+            <p>Rick and Morty Print Relaxed Fit T-shirt</p>
+            <button class="add-to-cart" onclick="openModal('Rick and Morty Print Relaxed Fit T-shirt', 599)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="tshirt15.jpg" height="200px" width="200px">
+            <p>Kappa Printed T-shirt</p>
+            <button class="add-to-cart" onclick="openModal('Kappa Printed T-shirt', 999)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="tshirt16.jpg" height="200px" width="200px">
+            <p>Panelled Polo T-shirt</p>
+            <button class="add-to-cart" onclick="openModal('Panelled Polo T-shirt', 699)">Buy Now 🛒</button>
+
+        </div>
+
+    </div>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalProductName"></h2>
+            <div class="sizes">
+                <p>Select Size:</p>
+                <button class="size-btn" onclick="selectSize('S')">S</button>
+                <button class="size-btn" onclick="selectSize('M')">M</button>
+                <button class="size-btn" onclick="selectSize('L')">L</button>
+                <button class="size-btn" onclick="selectSize('XL')">XL</button>
+            </div>
+            <button id="modalAddToCartBtn">Add to Cart 🛒</button>
+        </div>
+    </div>
+
+
+   <div class="footer">
+        <div class="footer-container">
+            <div class="footer-box-1">
+            <p class="side"><a href="index.html">Home</a></p>
+            <p class="side"><a href="shirts.html">Shirts</a></p>
+            <p class="side"><a href="pants.html">Pants & chinos</a></p>
+            <p class="side"><a href="shorts.html">Shorts</a></p>
+            <p class="side"><a href="tshirts.html">T-Shirts</a></p>
+      
+            </div>
+            <div class="footer-box-2">
+                <h2>EasyFit</h2>
+                <p>Men’s Clothing</p>
+            </div>
+            <div class="footer-box-3">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+            <div class="footer-box-3">
+                <p>@2023 easyfit.com</p>
+            </div>
+        </div>
+
+    </div>
+    <script src="collection.js"></script>
+
+</body>
+
+</html>

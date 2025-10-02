@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyFit</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-menu-toggle" onclick="shownavbar()">
+            <i class="fa-solid fa-bars fa-xl"></i>
+        </div>
+        <h1>EasyFit</h1>
+        <div class="navbar-links">
+            <p class="cart-link"><a class="navbar-link" href="cart.html"> 
+                <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                <span id="cart-count" class="cart-count">0</span></a></p>
+        </div>
+        </div>
+    </nav>
+
+    <div class="side-navbar">
+        <p style="text-align: right;" onclick="closenavbar()">
+            <i class="fa-solid fa-xmark fa-xl"></i>
+        </p>
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"><a href="index.html">Home</a></p>
+            <p class="side-navbar-link"><a href="shirts.html">Shirts</a></p>
+            <p class="side-navbar-link"><a href="pants.html">Pants & chinos</a>
+            <p class="side-navbar-link"><a href="shorts.html">Shorts</a></p>
+            <p class="side-navbar-link"><a href="tshirts.html">T-Shirts</a></p>
+           
+        </div>
+
+    </div>
+    <div class="popup-overlay" onclick="closenavbar()"></div>
+
+    <div class="cart-container" style="padding: 20px;">
+
+        <div id="cart-items"></div>
+
+        <div class="btn">
+
+            <button onclick="clearCart()" id="clear-btn">
+                Clear Cart
+            </button>
+
+            <button onclick="placeOrder()" id="order-btn">
+                Place Order
+            </button>
+
+
+        </div>
+        <h3 id="total-price">Total: ₹0</h3>
+    </div>
+
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-box-1">
+                <p class="side"><a href="index.html">Home</a></p>
+                <p class="side"><a href="shirts.html">Shirts</a></p>
+                <p class="side"><a href="pants.html">Pants & chinos</a></p>
+                <p class="side"><a href="shorts.html">Shorts</a></p>
+                <p class="side"><a href="tshirts.html">T-Shirts</a></p>
+        
+            </div>
+            <div class="footer-box-2">
+                <h2>EasyFit</h2>
+                <p>Men’s Clothing</p>
+            </div>
+            <div class="footer-box-3">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+            <div class="footer-box-3">
+                <p>@2023 easyfit.com</p>
+            </div>
+        </div>
+
+    </div>
+    <script src="cart.js"></script>
+
+</body>
+
+</html>

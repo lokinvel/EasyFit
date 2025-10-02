@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyFit</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-menu-toggle" onclick="shownavbar()">
+            <i class="fa-solid fa-bars fa-xl"></i>
+        </div>
+        <h1>EasyFit</h1>
+        <div class="navbar-links">
+            <p class="cart-link"><a class="navbar-link" href="cart.html"> 
+                <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                <span id="cart-count"class="cart-count">0</span></a></p>
+        </div>
+    </nav>
+
+    <div class="side-navbar">
+        <p style="text-align: right;" onclick="closenavbar()">
+            <i class="fa-solid fa-xmark fa-xl"></i>
+        </p>
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"><a href="index.html">Home</a></p>
+            <p class="side-navbar-link"><a href="shirts.html">Shirts</a></p>
+            <p class="side-navbar-link"><a href="pants.html">Pants & chinos</a></p>
+            <p class="side-navbar-link"><a href="shorts.html">Shorts</a></p>
+            <p class="side-navbar-link"><a href="tshirts.html">T-Shirts</a></p>
+     
+
+        </div>
+
+    </div>
+    <div class="popup-overlay" onclick="closenavbar()"></div>
+
+    <div class="product-section">
+
+        <form class="product-search">
+            <input type="text" id="search" placeholder="search" autocomplete="off">
+            <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
+            <i class="fa-solid fa-xmark" id="clearBtn" style="display:none; cursor:pointer;"></i>
+        </form>
+    </div>
+
+    <div class="products">
+        <div class="product-box">
+            <img src="short1.jpg" height="200px" width="200px">
+            <p>Regular Fit Shorts with Drawstring Closure</p>
+            <button class="add-to-cart" onclick="openModal('Regular Fit Shorts with Drawstring Closure', 899)">Buy Now 🛒</button>
+            
+        </div>
+        <div class="product-box">
+            <img src="short2.jpg" height="200px" width="200px">
+            <p>Panelled Shorts with Pockets</p>
+            <button class="add-to-cart" onclick="openModal('Panelled Shorts with Pockets', 699)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="short3.jpg" height="200px" width="200px">
+            <p>Shorts with Elasticated Waistband and Pockets</p>
+            <button class="add-to-cart" onclick="openModal('Shorts with Elasticated Waistband and Pockets', 799)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="short4.jpg" height="200px" width="200px">
+            <p>Kappa Logo Print Running Shorts with Inner Shorts</p>
+            <button class="add-to-cart" onclick="openModal('Kappa Logo Print Running Shorts with Inner Shorts', 999)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="short5.jpg" height="200px" width="200px">
+            <p>Kappa Logo Embroidered Shorts with Drawstring Closure</p>
+            <button class="add-to-cart" onclick="openModal('Kappa Logo Embroidered Shorts with Drawstring Closure', 899)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="short6.jpg" height="200px" width="200px">
+            <p>Panelled Shorts with Pockets</p>
+            <button class="add-to-cart" onclick="openModal('Panelled Shorts with Pockets', 499)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="short7.jpg" height="200px" width="200px">
+            <p>Kappa Printed Shorts with Drawstring Closure and Pockets</p>
+            <button class="add-to-cart" onclick="openModal('Kappa Printed Shorts with Drawstring Closure and Pockets', 699)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="short8.jpg" height="200px" width="200px">
+            <p>Panel Detail Shorts with Elasticated Waistband</p>
+            <button class="add-to-cart" onclick="openModal('Panel Detail Shorts with Elasticated Waistband', 599)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="short9.jpg" height="200px" width="200px">
+            <p>Lee Cooper Regular Fit Denim Shorts with Belt Detail</p>
+            <button class="add-to-cart" onclick="openModal('Lee Cooper Regular Fit Denim Shorts with Belt Detail', 899)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="short10.jpg" height="200px" width="200px">
+            <p>Mid-Rise Cargo Shorts with Pockets and Button Closure</p>
+            <button class="add-to-cart" onclick="openModal('Mid-Rise Cargo Shorts with Pockets and Button Closure', 999)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="short11.jpg" height="200px" width="200px">
+            <p>Cargo Shorts with Pockets</p>
+            <button class="add-to-cart" onclick="openModal('Cargo Shorts with Pockets', 799)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="short12.jpg" height="200px" width="200px">
+            <p>Textured Shorts with Drawstring Closure and Pockets</p>
+            <button class="add-to-cart" onclick="openModal('Textured Shorts with Drawstring Closure and Pockets', 699)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="short13.jpg" height="200px" width="200px">
+            <p>Panelled Performance Shorts with Pockets</p>
+            <button class="add-to-cart" onclick="openModal('Panelled Performance Shorts with Pockets', 799)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="short14.jpg" height="200px" width="200px">
+            <p>Denim Shorts with Button Closure and Pockets</p>
+            <button class="add-to-cart" onclick="openModal('Denim Shorts with Button Closure and Pockets', 599)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="short15.jpg" height="200px" width="200px">
+            <p>Printed Shorts with Drawstring Closure and Pockets</p>
+            <button class="add-to-cart" onclick="openModal('Printed Shorts with Drawstring Closure and Pockets', 999)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="short16.jpg" height="200px" width="200px">
+            <p>Waffle Textured Shorts with Pockets</p>
+            <button class="add-to-cart" onclick="openModal('Waffle Textured Shorts with Pockets', 699)">Buy Now 🛒</button>
+
+        </div>
+
+    </div>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalProductName"></h2>
+            <div class="sizes">
+                <p>Select Size:</p>
+                <button class="size-btn" onclick="selectSize('S')">S</button>
+                <button class="size-btn" onclick="selectSize('M')">M</button>
+                <button class="size-btn" onclick="selectSize('L')">L</button>
+                <button class="size-btn" onclick="selectSize('XL')">XL</button>
+            </div>
+            <button id="modalAddToCartBtn">Add to Cart 🛒</button>
+        </div>
+    </div>
+
+
+   <div class="footer">
+        <div class="footer-container">
+            <div class="footer-box-1">
+            <p class="side"><a href="index.html">Home</a></p>
+            <p class="side"><a href="shirts.html">Shirts</a></p>
+            <p class="side"><a href="pants.html">Pants & chinos</a></p>
+            <p class="side"><a href="shorts.html">Shorts</a></p>
+            <p class="side"><a href="tshirts.html">T-Shirts</a></p>
+           
+            </div>
+            <div class="footer-box-2">
+                <h2>EasyFit</h2>
+                <p>Men’s Clothing</p>
+            </div>
+            <div class="footer-box-3">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+            <div class="footer-box-3">
+                <p>@2023 easyfit.com</p>
+            </div>
+        </div>
+
+    </div>
+    <script src="collection.js"></script>
+
+</body>
+
+</html>

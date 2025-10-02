@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyFit</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-menu-toggle" onclick="shownavbar()">
+            <i class="fa-solid fa-bars fa-xl"></i>
+        </div>
+        <h1>EasyFit</h1>
+        <div class="navbar-links">
+            <p class="cart-link"><a class="navbar-link" href="cart.html">
+                    <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                    <span id="cart-count" class="cart-count">0</span></a>
+            </p>
+        </div>
+    </nav>
+
+    <div class="side-navbar">
+        <p style="text-align: right;" onclick="closenavbar()">
+            <i class="fa-solid fa-xmark fa-xl"></i>
+        </p>
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"><a href="index.html">Home</a></p>
+            <p class="side-navbar-link"><a href="shirts.html">Shirts</a></p>
+            <p class="side-navbar-link"><a href="pants.html">Pants & chinos</a></p>
+            <p class="side-navbar-link"><a href="shorts.html">Shorts</a></p>
+            <p class="side-navbar-link"><a href="tshirts.html">T-Shirts</a></p>
+           
+
+        </div>
+    </div>
+
+    <div class="popup-overlay" onclick="closenavbar()"></div>
+
+    <div class="header">
+        <div>
+            <h1>level up your style</h1>
+            <p>with our stunning collections</p>
+            <button class="header-button" onclick="window.location.href='shirts.html'">
+                Shop Now
+            </button>
+        </div>
+
+        <div>
+            <img class="header-img" src="logo.jpg" height="200px" width="200px" alt="">
+        </div>
+    </div>
+
+    <div class="service">
+        <div class="service-container">
+            <div class="service-container-1">
+                <div>
+                    <h2>we provide best</h2>
+                    <h2>customer experience</h2>
+                </div>
+
+                <div>
+                    <p>|| we ensure that our customer have the best shopping experience</p>
+                </div>
+            </div>
+
+            <div class="service-container-2">
+                <div>
+                    <i class="fa-regular fa-face-smile"></i>
+                    <h4>Premium Fabrics</h4>
+                    <p>Only the finest cotton and linen materials sourced globally for ultimate comfort and durability.
+                    </p>
+                </div>
+                <div>
+                    <i class="fa-regular fa-face-smile"></i>
+                    <h4>Exclusive Designs</h4>
+                    <p>Each collection is designed by top fashion experts to keep you ahead of trends every season.</p>
+                </div>
+                <div>
+                    <i class="fa-regular fa-face-smile"></i>
+                    <h4>Fast & Free Shipping</h4>
+                    <p>Enjoy free delivery on all orders above ₹499 with hassle-free 7-day returns.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <h2 style="padding: 20px;">Collections</h2>
+
+        <div class="collections">
+            <div class="collections-cotainer">
+                <img src="img13.jpg" height="200px" width="200px" onclick="window.location.href='shirts.html'">
+                 <p>Shirts</p>
+                
+
+            </div>
+            <div class="collections-cotainer">
+                <p>Pants & Chinos</p>
+                <img src="pant11.jpg" height="200px" width="200px" onclick="window.location.href='pants.html'">
+
+            </div>
+            <div class="collections-cotainer">
+                <img src="short9.jpg" height="200px" width="200px" onclick="window.location.href='shorts.html'">
+                  <p>Shorts</p>
+            </div>
+            <div class="collections-cotainer">
+                <p>T-Shirts</p>
+                <img src="tshirt16.jpg" height="200px" width="200px" onclick="window.location.href='tshirts.html'">
+
+            </div>
+        </div>
+        <div class="news-letter">
+            <h2>JOIN OUR NEWS LETTER</h2>
+            <div>
+                <input type="email" id="newsletter-email" placeholder="email@example.com" required></input>
+            </div>
+            <div>
+                <button onclick="subscribeNewsletter()">subsribe<i class="fa-solid fa-arrow-right"></i> </button>
+            </div>
+        </div>
+
+
+        <div class="footer">
+            <div class="footer-container">
+                <div class="footer-box-1">
+                    <p class="side"><a href="index.html">Home</a></p>
+                    <p class="side"><a href="shirts.html">Shirts</a></p>
+                    <p class="side"><a href="pants.html">Pants & chinos</a></p>
+                    <p class="side"><a href="shorts.html">Shorts</a></p>
+                    <p class="side"><a href="tshirts.html">T-Shirts</a></p>
+               
+                </div>
+                <div class="footer-box-2">
+                    <h2>EasyFit</h2>
+                    <p>Men’s Clothing</p>
+                </div>
+                <div class="footer-box-3">
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-facebook"></i>
+                </div>
+                <div class="footer-box-3">
+                    <p>@2023 easyfit.com</p>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="index.js"></script>
+
+</body>
+
+</html>

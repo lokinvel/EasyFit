@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyFit</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-menu-toggle" onclick="shownavbar()">
+            <i class="fa-solid fa-bars fa-xl"></i>
+        </div>
+        <h1>EasyFit</h1>
+        <div class="navbar-links">
+            <p class="cart-link"><a class="navbar-link" href="cart.html"> 
+                <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                <span id="cart-count"class="cart-count">0</span></a></p>
+        </div>
+    </nav>
+
+    <div class="side-navbar">
+        <p style="text-align: right;" onclick="closenavbar()">
+            <i class="fa-solid fa-xmark fa-xl"></i>
+        </p>
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"><a href="index.html">Home</a></p>
+            <p class="side-navbar-link"><a href="shirts.html">Shirts</a></p>
+            <p class="side-navbar-link"><a href="pants.html">Pants & chinos</a></p>
+            <p class="side-navbar-link"><a href="shorts.html">Shorts</a></p>
+            <p class="side-navbar-link"><a href="tshirts.html">T-Shirts</a></p>
+      
+
+        </div>
+
+    </div>
+    <div class="popup-overlay" onclick="closenavbar()"></div>
+
+    <div class="product-section">
+
+        <form class="product-search">
+            <input type="text" id="search" placeholder="search" autocomplete="off">
+            <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
+            <i class="fa-solid fa-xmark" id="clearBtn" style="display:none; cursor:pointer;"></i>
+        </form>
+    </div>
+
+    <div class="products">
+        <div class="product-box">
+            <img src="img1.jpg" height="200px" width="200px">
+            <p>Regular Fit Shirt with Short Sleeves</p>
+            <button class="add-to-cart" onclick="openModal('Regular Fit Shirt with Short Sleeves', 1499)">Buy Now 🛒</button>
+            
+        </div>
+        <div class="product-box">
+            <img src="img2.jpg" height="200px" width="200px">
+            <p>Plain Shirt with Spread Collar and Long Sleeves</p>
+            <button class="add-to-cart" onclick="openModal('Plain Shirt with Spread Collar and Long Sleeves', 1599)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="img3.jpg" height="200px" width="200px">
+            <p>Relaxed Fit Collared Resort Shirt</p>
+            <button class="add-to-cart" onclick="openModal('Relaxed Fit Collared Resort Shirt', 1199)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="img4.jpg" height="200px" width="200px">
+            <p>Regular Fit Linen Blend Shirt</p>
+            <button class="add-to-cart" onclick="openModal('Regular Fit Linen Blend Shirt', 1299)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="img5.jpg" height="200px" width="200px">
+            <p>Regular Fit Checked Seersucker Resort Shirt</p>
+            <button class="add-to-cart" onclick="openModal('Regular Fit Checked Seersucker Resort Shirt', 1199)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="img6.jpg" height="200px" width="200px">
+            <p>Regular Fit Crinkle Textured Collared Shirt</p>
+            <button class="add-to-cart" onclick="openModal('Regular Fit Crinkle Textured Collared Shirt', 4199)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="img7.jpg" height="200px" width="200px">
+            <p>Textured Shirt with Hood and Chest Pockets</p>
+            <button class="add-to-cart" onclick="openModal('Textured Shirt with Hood and Chest Pockets', 1699)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="img8.jpg" height="200px" width="200px">
+            <p>Textured Slim-Fit Shirt with Short Sleeves</p>
+            <button class="add-to-cart" onclick="openModal('Textured Slim-Fit Shirt with Short Sleeves', 1599)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="img9.jpg" height="200px" width="200px">
+            <p>Regular Fit Striped Shirt</p>
+            <button class="add-to-cart" onclick="openModal('Regular Fit Striped Shirt', 1499)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="img10.jpg" height="200px" width="200px">
+            <p>Regular Fit Shirt with Collar and Long Sleeves</p>
+            <button class="add-to-cart" onclick="openModal('Regular Fit Shirt with Collar and Long Sleeves', 1999)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="img11.jpg" height="200px" width="200px">
+            <p>Lee Cooper Regular Fit Collared Shirt with Chest Pocket</p>
+            <button class="add-to-cart" onclick="openModal('Lee Cooper Regular Fit Collared Shirt with Chest Pocket', 1299)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="img12.jpg" height="200px" width="200px">
+            <p>Lee Cooper Regular Fit Shirt with Collar</p>
+            <button class="add-to-cart" onclick="openModal('Lee Cooper Regular Fit Shirt with Collar', 1499)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="img13.jpg" height="200px" width="200px">
+            <p>Printed Camp Collar Resort Shirt</p>
+            <button class="add-to-cart" onclick="openModal('Printed Camp Collar Resort Shirt', 1799)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="img14.jpg" height="200px" width="200px">
+            <p>Textured Collared Shirt</p>
+            <button class="add-to-cart" onclick="openModal('Textured Collared Shirt', 1599)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="img15.jpg" height="200px" width="200px">
+            <p>Relaxed Fit Poplin Shirt</p>
+            <button class="add-to-cart" onclick="openModal('Relaxed Fit Poplin Shirt', 1999)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="img16.jpg" height="200px" width="200px">
+            <p>Regular Fit Textured Shirt with Mandarin Collar</p>
+            <button class="add-to-cart" onclick="openModal('Regular Fit Textured Shirt with Mandarin Collar', 1499)">Buy Now 🛒</button>
+
+        </div>
+
+    </div>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalProductName"></h2>
+            <div class="sizes">
+                <p>Select Size:</p>
+                <button class="size-btn" onclick="selectSize('S')">S</button>
+                <button class="size-btn" onclick="selectSize('M')">M</button>
+                <button class="size-btn" onclick="selectSize('L')">L</button>
+                <button class="size-btn" onclick="selectSize('XL')">XL</button>
+            </div>
+            <button id="modalAddToCartBtn">Add to Cart 🛒</button>
+        </div>
+    </div>
+
+
+   <div class="footer">
+        <div class="footer-container">
+            <div class="footer-box-1">
+            <p class="side"><a href="index.html">Home</a></p>
+            <p class="side"><a href="shirts.html">Shirts</a></p>
+            <p class="side"><a href="pants.html">Pants & chinos</a></p>
+            <p class="side"><a href="shorts.html">Shorts</a></p>
+            <p class="side"><a href="tshirts.html">T-Shirts</a></p>
+
+            </div>
+            <div class="footer-box-2">
+                <h2>EasyFit</h2>
+                <p>Men’s Clothing</p>
+            </div>
+            <div class="footer-box-3">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+            <div class="footer-box-3">
+                <p>@2023 easyfit.com</p>
+            </div>
+        </div>
+
+    </div>
+    <script src="collection.js"></script>
+
+</body>
+
+</html>

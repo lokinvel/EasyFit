@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyFit</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="navbar-menu-toggle" onclick="shownavbar()">
+            <i class="fa-solid fa-bars fa-xl"></i>
+        </div>
+        <h1>EasyFit</h1>
+        <div class="navbar-links">
+            <p class="cart-link"><a class="navbar-link" href="cart.html">
+                <i class="fa-solid fa-cart-shopping fa-xl"></i>
+                <span id="cart-count" class="cart-count">0</span></a></p>
+        </div>
+    </nav>
+
+    <div class="side-navbar">
+        <p style="text-align: right;" onclick="closenavbar()">
+            <i class="fa-solid fa-xmark fa-xl"></i>
+        </p>
+        <div class="side-navbar-links">
+            <p class="side-navbar-link"><a href="index.html">Home</a></p>
+            <p class="side-navbar-link"><a href="shirts.html">Shirts</a></p>
+            <p class="side-navbar-link"><a href="pants.html">Pants & chinos</a></p>
+            <p class="side-navbar-link"><a href="shorts.html">Shorts</a></p>
+            <p class="side-navbar-link"><a href="tshirts.html">T-Shirts</a></p>
+            
+
+        </div>
+
+    </div>
+    <div class="popup-overlay" onclick="closenavbar()"></div>
+
+    <div class="product-section">
+
+        <form class="product-search">
+            <input type="text" id="search" placeholder="search" autocomplete="off">
+            <i class="fa-solid fa-magnifying-glass" id="searchIcon"></i>
+            <i class="fa-solid fa-xmark" id="clearBtn" style="display:none; cursor:pointer;"></i>
+        </form>
+    </div>
+
+    <div class="products">
+        <div class="product-box">
+            <img src="pant1.jpg" height="200px" width="200px">
+            <p>Regular Fit Trousers with Pockets</p>
+            <button class="add-to-cart" onclick="openModal('Regular Fit Trousers with Pockets', 1499)">Buy Now 🛒</button>
+        </div>
+
+         <div class="product-box">
+            <img src="pant2.jpg" height="200px" width="200px">
+            <p>Slim Fit Dobby Trousers</p>
+            <button class="add-to-cart" onclick="openModal('Slim Fit Dobby Trousers', 1599)">Buy Now 🛒</button>
+
+        </div>
+
+         <div class="product-box">
+            <img src="pant3.jpg" height="200px" width="200px">
+            <p>Chinos with Pockets and Button Closure</p>
+            <button class="add-to-cart" onclick="openModal('Chinos with Pockets and Button Closure', 1199)">Buy Now 🛒</button>
+
+        </div>
+          <div class="product-box">
+            <img src="pant4.jpg" height="200px" width="200px">
+            <p>Straight Fit Pants with Drawstring Closure and Flexicomfort Waistband</p>
+            <button class="add-to-cart" onclick="openModal('Straight Fit Pants with Drawstring Closure, Pocket and Flexicomfort Waistband', 1299)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="pant5.jpg" height="200px" width="200px">
+            <p>Slim Fit Dobby Formal Trousers</p>
+            <button class="add-to-cart" onclick="openModal('Slim Fit Dobby Formal Trousers', 1199)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="pant6.jpg" height="200px" width="200px">
+            <p>Solid Chinos with Button Closure and Pockets</p>
+            <button class="add-to-cart" onclick="openModal('Solid Chinos with Button Closure and Pockets', 4199)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="pant7.jpg" height="200px" width="200px">
+            <p>Louis Relaxed Fit Pants with Flexi Waist and Pockets</p>
+            <button class="add-to-cart" onclick="openModal('Louis Relaxed Fit Pants with Flexi Waist and Pockets', 1699)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="pant8.jpg" height="200px" width="200px">
+            <p>Lee Cooper Men Relaxed Fit Cotton Pants</p>
+            <button class="add-to-cart" onclick="openModal('Lee Cooper Men Relaxed Fit Cotton Pants', 1599)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="pant9.jpg" height="200px" width="200px">
+            <p>Relaxed Fit Elasticated Waist Trousers</p>
+            <button class="add-to-cart" onclick="openModal('Relaxed Fit Elasticated Waist Trousers', 1499)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="pant10.jpg" height="200px" width="200px">
+            <p>Men Slim Fit Formal Trousers</p>
+            <button class="add-to-cart" onclick="openModal('Men Slim Fit Formal Trousers', 1999)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="pant11.jpg" height="200px" width="200px">
+            <p>Regular Fit Pants with Drawstring Closure and Pockets</p>
+            <button class="add-to-cart" onclick="openModal('Regular Fit Pants with Drawstring Closure and Pockets', 1299)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="pant12.jpg" height="200px" width="200px">
+            <p>Lee Cooper Relaxed Fit Pants with Elasticated Waistband and Pockets</p>
+            <button class="add-to-cart" onclick="openModal('Lee Cooper Relaxed Fit Pants with Elasticated Waistband and Pockets', 1499)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="pant13.jpg" height="200px" width="200px">
+            <p>Checked Regular Fit Cargo Pants with Drawstring Closure</p>
+            <button class="add-to-cart" onclick="openModal('Checked Regular Fit Cargo Pants with Drawstring Closure and Pockets', 1799)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="pant14.jpg" height="200px" width="200px">
+            <p>Iconic Men Regular Fit Formal Trousers</p>
+            <button class="add-to-cart" onclick="openModal('Iconic Men Regular Fit Formal Trousers', 1599)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="pant15.jpg" height="200px" width="200px">
+            <p>Iconic Regular Fit Textured Pants with Elasticated Waistband </p>
+            <button class="add-to-cart" onclick="openModal('Iconic Regular Fit Textured Pants with Elasticated Waistband and Pockets', 1999)">Buy Now 🛒</button>
+
+        </div>
+        <div class="product-box">
+            <img src="pant16.jpg" height="200px" width="200px">
+            <p>Textured Regular Fit Pants with Pockets</p>
+            <button class="add-to-cart" onclick="openModal('Textured Regular Fit Pants with Pockets', 1499)">Buy Now 🛒</button>
+
+        </div>
+
+    </div>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2 id="modalProductName"></h2>
+            <div class="sizes">
+                <p>Select Size:</p>
+                <button class="size-btn" onclick="selectSize('30')">30</button>
+                <button class="size-btn" onclick="selectSize('32')">32</button>
+                <button class="size-btn" onclick="selectSize('34')">34</button>
+                <button class="size-btn" onclick="selectSize('36')">36</button>
+            </div>
+            <button id="modalAddToCartBtn">Add to Cart 🛒</button>
+        </div>
+    </div>
+
+
+    <div class="footer">
+        <div class="footer-container">
+            <div class="footer-box-1">
+            <p class="side"><a href="index.html">Home</a></p>
+            <p class="side"><a href="shirts.html">Shirts</a></p>
+            <p class="side"><a href="pants.html">Pants & chinos</a></p>
+            <p class="side"><a href="shorts.html">Shorts</a></p>
+            <p class="side"><a href="tshirts.html">T-Shirts</a></p>
+            
+            </div>
+            <div class="footer-box-2">
+                <h2>EasyFit</h2>
+                <p>Men’s Clothing</p>
+            </div>
+            <div class="footer-box-3">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+            </div>
+            <div class="footer-box-3">
+                <p>@2023 easyfit.com</p>
+            </div>
+        </div>
+
+    </div>
+    <script src="collection.js"></script>
+
+</body>
+
+</html>
